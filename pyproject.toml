@@ -1,0 +1,31 @@
+[project]
+name = "inventree-supplier-history-plugin"
+version = "0.2"
+description = "InvenTree plugin to save and chart price and avaibility historic data"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Plugins",
+]
+keywords = ["inventree", "inventree-plugin", "supplier_history", "inventree-supplier-history"]
+license.text = "MIT"
+authors = [{ name = "Jackymancs4" }]
+
+[project.urls]
+Homepage = "https://github.com/Jackymancs4/inventree-supplier-history-plugin"
+
+[project.entry-points."inventree_plugins"]
+inventree-supplier-history-plugin = "inventree_supplier_history_plugin:supplier_history.SupplierHistoryPlugin"
+
+[tool.isort]
+line_length = 96
+lines_after_imports = 1
+multi_line_output = 5
+combine_as_imports = true
+combine_straight_imports = true
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "INVENTREE", "FIRSTPARTY", "LOCALFOLDER"]
+known_inventree = ["company", "order", "part"]
+known_firstparty = ["plugin"]
